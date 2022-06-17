@@ -560,6 +560,36 @@
         "rev": "67067a1f3da63233a6e3b2c2f0148f95d046dd7e",
         "url": "https://github.com/makerdao/vote-proxy"
       }
+    },
+    "xss-deploy_d989a44": {
+      "deps": {
+        "ds-auth": "ds-auth_a51e7ca",
+        "ds-pause": "ds-pause_5e798dd",
+        "ds-test": "ds-test_0a5da56",
+        "esm": "esm_8fabd86",
+        "xss": "xss_1723dee"
+      },
+      "name": "xss-deploy",
+      "repo": {
+        "name": "xss-deploy-d989a44",
+        "ref": "HEAD",
+        "rev": "d989a446388e6f88f1a18d8791b9dbcb2d37ef9c",
+        "url": "https://github.com/yodaplus/xss-deploy"
+      }
+    },
+    "xss_1723dee": {
+      "deps": {
+        "ds-test": "ds-test_0a5da56",
+        "ds-token": "ds-token_a5e709b",
+        "ds-value": "ds-value_4049ecd"
+      },
+      "name": "dss",
+      "repo": {
+        "name": "xss-1723dee",
+        "ref": "HEAD",
+        "rev": "1723deee31d9082a0746e836b0098d71174eb488",
+        "url": "https://github.com/yodaplus/xss"
+      }
     }
   },
   "this": {
@@ -593,7 +623,8 @@
       "testchain-medians": "testchain-medians_e842e4f",
       "token-faucet": "token-faucet_2d9189c",
       "vote-delegate": "vote-delegate_c2345b7",
-      "vote-proxy": "vote-proxy_67067a1"
+      "vote-proxy": "vote-proxy_67067a1",
+      "xss-deploy": "xss-deploy_d989a44"
     },
     "name": "dss-deploy-scripts"
   },
