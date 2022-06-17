@@ -1,5 +1,5 @@
 {
-  "description": "Testchain Deployment",
+  "description": "Xinfin Mainnet Deployment",
   "omniaFromAddr": "0xb247cde9c6a635d3f9fadef01f058d327f58fd00",
   "omniaAmount": "0",
   "pauseDelay": "0",
@@ -24,22 +24,50 @@
   "flop_tau": "172800",
   "flash_max": "500000000",
   "flash_toll": "0.05",
+  "import": {
+    "gov": "0xBE83B14835daD188c713e1F2A300bf46fd1bcEBE"
+  },
   "tokens": {
     "ETH": {
       "import": {
-        "gem": "0x973d61B8c1910725c9dADd0c88Dd72D78c589d95",
-        "pip": "0x4e1955cCdE51fc1cF58757fdF114839de100837f"
+        "gem": "0xE376531Ed4E8ec3a074672B52301803b437607E5",
+        "pip": "0x4af25dcAC2c13117726202B65f5B21AfD077a078"
       },
       "joinDeploy": {
         "src": "GemJoin",
         "extraParams": []
       },
-      "ilks": {}
+      "ilks": {
+        "A": {
+          "mat": "200",
+          "line": "3000000",
+          "autoLine": "0",
+          "autoLineGap": "0",
+          "autoLineTtl": "0",
+          "dust": "0",
+          "duty": "0",
+          "clipDeploy": {
+            "chop": "30",
+            "hole": "3000000",
+            "chip": "0",
+            "tip": "0",
+            "buf": "105",
+            "tail": "3592",
+            "cusp": "85.71",
+            "calc": {
+              "type": "StairstepExponentialDecrease",
+              "step": "70",
+              "cut": "99.7"
+            },
+            "cm_tolerance": "50"
+          }
+        }
+      }
     },
     "XDC": {
       "import": {
-        "gem": "0x973d61B8c1910725c9dADd0c88Dd72D78c589d95",
-        "pip": "0x4e1955cCdE51fc1cF58757fdF114839de100837f"
+        "gem": "0xE376531Ed4E8ec3a074672B52301803b437607E5",
+        "pip": "0x4af25dcAC2c13117726202B65f5B21AfD077a078"
       },
       "joinDeploy": {
         "src": "GemJoin",

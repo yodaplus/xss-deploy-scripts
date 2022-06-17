@@ -34,7 +34,32 @@
         "src": "GemJoin",
         "extraParams": []
       },
-      "ilks": {}
+      "ilks": {
+        "A": {
+          "mat": "200",
+          "line": "3000000",
+          "autoLine": "0",
+          "autoLineGap": "0",
+          "autoLineTtl": "0",
+          "dust": "0",
+          "duty": "0",
+          "clipDeploy": {
+            "chop": "30",
+            "hole": "3000000",
+            "chip": "0",
+            "tip": "0",
+            "buf": "105",
+            "tail": "3592",
+            "cusp": "85.71",
+            "calc": {
+              "type": "StairstepExponentialDecrease",
+              "step": "70",
+              "cut": "99.7"
+            },
+            "cm_tolerance": "50"
+          }
+        }
+      }
     },
     "XDC": {
       "import": {
