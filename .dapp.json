@@ -434,6 +434,19 @@
         "url": "https://github.com/makerdao/median"
       }
     },
+    "medians_8291ceb": {
+      "deps": {
+        "ds-test": "ds-test_0a5da56",
+        "median": "median_0316acd"
+      },
+      "name": "medians",
+      "repo": {
+        "name": "medians-8291ceb",
+        "ref": "HEAD",
+        "rev": "8291cebee010d9c856bd648d1615faf94f83be77",
+        "url": "https://github.com/yodaplus/medians"
+      }
+    },
     "mkr-authority_fc19f8a": {
       "deps": {
         "ds-test": "ds-test_0a5da56"
@@ -508,19 +521,6 @@
         "ref": "HEAD",
         "rev": "5f9c56f0a2109b36cae14e66d78eadd7125fd1e3",
         "url": "https://github.com/makerdao/symbolic-voting"
-      }
-    },
-    "testchain-medians_e842e4f": {
-      "deps": {
-        "ds-test": "ds-test_0a5da56",
-        "median": "median_0316acd"
-      },
-      "name": "testchain-medians",
-      "repo": {
-        "name": "testchain-medians-e842e4f",
-        "ref": "HEAD",
-        "rev": "e842e4f474a30b0b5b1da581aeaca2aae1ae173e",
-        "url": "https://github.com/makerdao/testchain-medians"
       }
     },
     "token-faucet_2d9189c": {
@@ -614,13 +614,13 @@
       "dss-vest": "dss-vest_8b10556",
       "flipper-mom": "flipper-mom_3a57ea1",
       "ilk-registry": "ilk-registry_81ba973",
+      "medians": "medians_8291ceb",
       "mkr-authority": "mkr-authority_fc19f8a",
       "multicall": "multicall_1e1b443",
       "osm": "osm_e36c874",
       "osm-mom": "osm-mom_820324a",
       "proxy-registry": "proxy-registry_981715a",
       "symbolic-voting": "symbolic-voting_5f9c56f",
-      "testchain-medians": "testchain-medians_e842e4f",
       "token-faucet": "token-faucet_2d9189c",
       "vote-delegate": "vote-delegate_c2345b7",
       "vote-proxy": "vote-proxy_67067a1",

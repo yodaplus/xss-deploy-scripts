@@ -38,7 +38,8 @@ for token in $tokens; do
         type=$(jq -r ".tokens.${token} | .pipDeploy | .type | values" "$CONFIG_FILE")
         # Deploy Medianizer as Feed
         if [[ "$type" == "median" ]]; then
-            contract=$(dappCreate testchain-medians "Median${token}USD")
+            bar=$(jq -r ".tokens.${token} | .pipDeploy | .bar | values" "$CONFIG_FILE")
+            contract=$(dappCreate medians "Median${token}USD")
             eval "export VAL_${token}=${contract}"
             logAddr "VAL_${token}" "$(eval "echo ${contract}")"
             signers=$(jq -r ".tokens.${token} | .pipDeploy | .signers | .[]" "$CONFIG_FILE")
@@ -48,8 +49,11 @@ for token in $tokens; do
                 allsigners+=("${signer}")
             done
             sethSend "$(eval echo "\$VAL_${token}")" 'lift(address[] memory)' "[$(join "${allsigners[@]}")]"
+
             # Set quorum for Medianizer
-            sethSend "$(eval echo "\$VAL_${token}")" 'setBar(uint256)' "$(seth --to-uint256 3)"
+            if [[ "$bar" != "" ]]; then
+                sethSend "$(eval echo "\$VAL_${token}")" 'setBar(uint256)' "$(seth --to-uint256 $bar)"
+            fi
         fi
         # Deploy DSValue as Feed
         if [[ "${type}" == "value" ]]; then
@@ -60,7 +64,7 @@ for token in $tokens; do
     else
         eval "export VAL_${token}=${pipAddr}"
         copy osm
-        copy testchain-medians
+        copy medians
         logAddr "VAL_${token}" "$pipAddr"
     fi
     eval "export PIP_${token}=\$VAL_${token}"
